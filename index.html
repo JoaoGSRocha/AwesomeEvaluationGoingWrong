@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- All of the above code is to import from the cloud servers
+	both the bootstrap styling for the button and the jquery library in order
+	to be able to collapse the content of all the divs -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<!-- UP TILL HERE WAS ALL THE NECESSARY IMPORTS, link of the sample code I used
+  	as reference, follows underneath
+  	https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_collapse_simple&stacked=h -->
+
+ 	<link rel="stylesheet" type="text/css" href="Style/general.css">
 	<title>GUI, the Graphical User Interface you can call a human :D</title>
 </head>
 <body>
-<div id="prof_pic">
-	
-</div>
-<div id="bio"></div>
-<div id="form"></div>
-<div id="map"></div>
-<div id="map"></div>
+	<center>
+
+	<h2>GUI, the Graphical User Interface you can call a human :D</h2>
+
+ 	<div id="prof_pic">
+		<img src="imgs/profile_picas.jpg" alt="A really annoying message telling you your profile didn't bother showing up..."/>	
+	</div>
+	<br>
+	<div id="bio" >
+		Bio info	
+	</div>
+	<div id="gallery" class="collapse guiCollapse">
+		Gallery
+	</div>
+	<button type="button" class="btn btn-info" data-toggle="collapse" 
+		data-target=".hallCol">Hall of Fame
+	</button>
+<br>
+	<div id="map" class="collapse mapCoL">
+		Map	
+	</div>
+	<button type="button" class="btn btn-info" data-toggle="collapse" 
+		data-target=".mapCol">Where to find this Pokemon!
+	</button>
+<br>
+	<div id="form" class="collapse guiCollapse"></div>
+		Form
+	</center>
 </body>
 </html>
